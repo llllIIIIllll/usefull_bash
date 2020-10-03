@@ -1,0 +1,40 @@
+<transport_descriptors>
+    <transport_descriptor>
+        <transport_id>TransportId1</transport_id> <!-- string -->
+        <type>UDPv4</type> <!-- string -->
+        <sendBufferSize>8192</sendBufferSize> <!-- uint32 -->
+        <receiveBufferSize>8192</receiveBufferSize> <!-- uint32 -->
+        <TTL>250</TTL> <!-- uint8 -->
+        <non_blocking_send>false</non_blocking_send> <!-- boolean -->
+        <maxMessageSize>16384</maxMessageSize> <!-- uint32 -->
+        <maxInitialPeersRange>100</maxInitialPeersRange> <!-- uint32 -->
+        <interfaceWhiteList>
+            <address>192.168.1.41</address> <!-- string -->
+            <address>127.0.0.1</address> <!-- string -->
+        </interfaceWhiteList>
+        <wan_addr>80.80.55.44</wan_addr> <!-- string -->
+        <output_port>5101</output_port> <!-- uint16 -->
+        <keep_alive_frequency_ms>5000</keep_alive_frequency_ms> <!-- uint32 -->
+        <keep_alive_timeout_ms>25000</keep_alive_timeout_ms> <!-- uint32 -->
+        <max_logical_port>9000</max_logical_port> <!-- uint16 -->
+        <logical_port_range>100</logical_port_range> <!-- uint16 -->
+        <logical_port_increment>2</logical_port_increment> <!-- uint16 -->
+        <listening_ports>
+            <port>5100</port> <!-- uint16 -->
+            <port>5200</port> <!-- uint16 -->
+        </listening_ports>
+        <calculate_crc>false</calculate_crc> <!-- boolean -->
+        <check_crc>false</check_crc> <!-- boolean -->
+        <enable_tcp_nodelay>false</enable_tcp_nodelay> <!-- boolean -->
+        <tls><!-- TLS Section --></tls>
+    </transport_descriptor>
+
+<port>
+    <portBase>7400</portBase>
+    <domainIDGain>200</domainIDGain>
+    <participantIDGain>10</participantIDGain>
+    <offsetd0>0</offsetd0>
+    <offsetd1>1</offsetd1>
+    <offsetd2>2</offsetd2>
+    <offsetd3>3</offsetd3>
+</port>
