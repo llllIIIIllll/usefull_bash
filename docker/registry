@@ -1,0 +1,11 @@
+
+docker volume create registry
+docker run -d -p 5000:5000 -v registry:/var/lib/registry --restart=always --name registry registry:2
+
+docker tag harbor.qomolo.com/qtruck/qtruck_dev_image:dev-x86_64-20201002_2200 localhost:5000/qtruck/qtruck_dev_image:dev-x86_64-20201002_2200
+
+docker push localhost:5000/qtruck/qtruck_dev_image:dev-x86_64-20201002_2200 
+
+docker tag harbor.qomolo.com/ros/melodic/ros-melodic-cuda:10.0-devel-ubuntu18.04 localhost:5000/ros/melodic/ros-melodic-cuda:10.0-devel-ubuntu18.04
+
+docker push localhost:5000/ros/melodic/ros-melodic-cuda:10.0-devel-ubuntu18.04 

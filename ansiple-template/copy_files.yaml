@@ -1,0 +1,8 @@
+---
+
+- name: copy file to qtruck
+  hosts: ~ppc[1-6] ~cpc[1-6]
+  tasks:
+    copy:
+    src: ~/Downloads/qtruck_build-a3062176-12856.zip
+    dest: ~/qtruck_binary

@@ -1,0 +1,11 @@
+
+
+
+
+sudo iptables -t mangle -I PREROUTING  1 -i enx00e04c71c474 -m udp -p udp --dport 5001 -j TEE --gateway 192.168.110.101
+
+sudo iptables -t mangle -I INPUT 1 -p udp --dport 5001 -j DNAT --to-destination=192.168.110.101:5001
+
+sudo iptables -t nat -A POSTROUTING -o enx00e04c71c474 -j MASQUERADE
+
+
